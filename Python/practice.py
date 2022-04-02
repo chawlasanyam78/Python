@@ -100,3 +100,17 @@ has33([1,3,1,3])
 - False
 has33([3,1,3])
 - False
+
+
+#Given a string, return a string where for every character in the original there are three characters
+
+def paperDoll(text):
+    g = []
+    for i in text:
+        g.append(i*3)
+    return ''.join(g)
+
+paperDoll('Hello')
+'HHHeeellllllooo'
+paperDoll('Mississippi')
+'MMMiiissssssiiissssssiiippppppiii'
