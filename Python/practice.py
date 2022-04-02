@@ -82,3 +82,21 @@ print(almostThere(109))
 print(almostThere(150))
 print(almostThere(210))
 print(almostThere(179))
+
+
+#Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+    for i in range(0, len(nums)):
+        if(i+1 < len(nums)):
+            if(nums[i] == 3 and nums[i+1] == 3):
+                return True
+    return False
+
+has33([3,3,1,2,4])
+- True
+has33([1,3,3])
+- True
+has33([1,3,1,3])
+- False
+has33([3,1,3])
+- False
