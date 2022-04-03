@@ -16,7 +16,7 @@ print(lesserOfTwoEvens(10,30))
 
 
 
-#  Write a function takes a two-word string and 
+# Write a function takes a two-word string and 
 # returns True if both words begin with same letter
 def animalCracker(string):
     x = string.split()
@@ -31,7 +31,6 @@ print(animalCracker('Crazy Kangaroo'))
 
 # Given two integers, return True if the sum of the integers is 20 
 # or if one of the integers is 20. If not, return False
-
 def makesTwenty(n1,n2):
     if n1 == 20 or n2 == 20:
         return True
@@ -46,7 +45,6 @@ print(makesTwenty(2,3))
 
 
 # Write a function that capitalizes the first and fourth letters of a name..
-
 def caps(string):
     g = ''
     for i,j in enumerate(string):
@@ -71,7 +69,6 @@ print(masterYoda('We are ready'))
 
 
 # Given an integer n, return True if n is within 10 of either 100 or 200
-
 def almostThere(n):
     if n in range(90,111) or n in range(190, 211):
         return True
@@ -85,7 +82,7 @@ print(almostThere(179))
 
 
 #Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
-
+def has33(nums):
     for i in range(0, len(nums)):
         if(i+1 < len(nums)):
             if(nums[i] == 3 and nums[i+1] == 3):
@@ -102,8 +99,8 @@ has33([3,1,3])
 - False
 
 
-#Given a string, return a string where for every character in the original there are three characters
-
+# Given a string, return a string where for every character 
+# in the original there are three characters
 def paperDoll(text):
     g = []
     for i in text:
@@ -111,6 +108,29 @@ def paperDoll(text):
     return ''.join(g)
 
 paperDoll('Hello')
-'HHHeeellllllooo'
+-'HHHeeellllllooo'
 paperDoll('Mississippi')
-'MMMiiissssssiiissssssiiippppppiii'
+-'MMMiiissssssiiissssssiiippppppiii'
+
+
+# SUMMER OF '69: Return the sum of the numbers in the array, 
+# except ignore sections of numbers starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). 
+# Return 0 for no numbers.
+def summer69(lst):
+    it = iter(lst)
+    total = 0
+    for x in it:
+        if x == 6:
+            9 in it
+        else:
+            total += x
+    return total
+
+summer69([1,2,3,4,5,6,7,8,9])
+15
+summer69([1,3,5])
+9
+summer69([4,5,6,7,8,9])
+9
+summer69([2,1,6,9,11])
+14
