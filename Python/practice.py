@@ -134,3 +134,27 @@ summer69([4,5,6,7,8,9])
 9
 summer69([2,1,6,9,11])
 14
+
+
+# COUNT PRIMES: Write a function that returns the number of prime numbers 
+# that exist up to and including a given number
+def checkPrime(num):
+    count = 0
+    for n in range(2, num+1):
+        flag = False
+        for i in range(2, n):
+            if(n % i == 0):
+                flag = True
+                break
+        if flag==False:
+            count += 1
+    return count
+
+checkPrime(100)
+25
+checkPrime(1000)
+168
+checkPrime(10000)
+1229
+checkPrime(100000)
+9592
